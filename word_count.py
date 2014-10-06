@@ -26,13 +26,12 @@ for line in text:
             word_count[word] = 1
 
 
-print word_count
+# print word_count
 #get the word, increment the instances of each word
 #make the word a key and add the number of instances as a value
 
 
 
-
-
-
-
+# print key and value pairs
+for key, value in word_count.items():
+    print "%s, %d" % (key, value)
