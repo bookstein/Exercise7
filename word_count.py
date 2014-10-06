@@ -17,11 +17,11 @@ for line in text:
 
 
     for word in words:
-        if word in word_count.keys():
-            word_count[word] += 1
-        else:
+        if not word_count.get(word):
             word_count[word] = 1
+        else:
+            word_count[word] += 1
 
 # print key and value pairs
-for key, value in sorted(word_count.iteritems()):
-    print "%s, %d" % (key, value)
+for key in sorted(word_count.keys()):
+    print "%s, %d" % (key, word_count[key])
