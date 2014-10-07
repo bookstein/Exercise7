@@ -12,7 +12,15 @@ for line in ratings:
     rest_name, rest_score = line.split(':')
     restaurant[rest_name] = int(rest_score)
 
+
+keys = restaurant.keys()
+keys.sort()
+
+print keys
+for key in keys:
+    print "Restaurant is: %s, score is %d" % (key, restaurant[key])
+
 # get values out of dictionary and sort by alphabetical order
 
-for rest in sorted(restaurant):
-    print "Restaurant %s is rated at %d" % (rest, restaurant[rest])
+# for rest in sorted(restaurant):
+#     print "Restaurant %s is rated at %d" % (rest, restaurant[rest])
