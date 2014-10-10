@@ -17,23 +17,29 @@ def read_file(filename):
 	# 		if punc in word:
 				# //remove punctuation
 
-	print words_list
+	return words_list
 
 
 
 
 # create dictionary of all words
 
+def make_dict(list_of_text):
+	word_dictionary = {}
 
+	for word in list_of_text:
+		# word_dictionary.setdefault(word, 1)
+		# word_dictionary.setdefault(word, 1)
 
+	print word_dictionary
 # loop through dictionary and count
 
 
 # main
 def main():
 	script, filename = argv
-	read_file(filename)
-	# make_dict()
+	list_of_text = read_file(filename)
+	make_dict(list_of_text)
 	# count_words()
 
 
