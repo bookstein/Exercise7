@@ -28,8 +28,10 @@ def make_dict(list_of_text):
 	word_dictionary = {}
 
 	for word in list_of_text:
-		# word_dictionary.setdefault(word, 1)
-		# word_dictionary.setdefault(word, 1)
+		count = 1
+		word_dictionary.setdefault(word, count)
+		count = word_dictionary[word]+1
+
 
 	print word_dictionary
 # loop through dictionary and count
