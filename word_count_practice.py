@@ -7,34 +7,6 @@ from sys import argv
 # open and read in file -- no need to do it line by line
 # lowercase, punctuation, line split
 
-def read_file(filename):
-	f = open(filename)
-	text = f.read()
-	text = text.lower()
-	words_list = text.split()
-	# for word in words_list:
-	# 	for punc in string.punctuation:
-	# 		if punc in word:
-				# //remove punctuation
-
-	return words_list
-
-
-
-
-# create dictionary of all words
-
-def make_dict(list_of_text):
-	word_dictionary = {}
-
-	for word in list_of_text:
-		count = 1
-		word_dictionary.setdefault(word, count)
-		count = word_dictionary[word]+1
-
-
-	print word_dictionary
-# loop through dictionary and count
 
 
 # main

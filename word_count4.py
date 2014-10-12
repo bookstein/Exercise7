@@ -1,5 +1,4 @@
 from sys import argv
-
 import string
 
 script, filename = argv
@@ -7,6 +6,7 @@ script, filename = argv
 text = open(filename)
 
 word_count = {}
+
 
 # for loop by line: checking for words, adding to dictionary
 for line in text:
