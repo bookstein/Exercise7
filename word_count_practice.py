@@ -13,24 +13,36 @@ def read_file(filename):
 
 	f = open(filename)
 	text = f.read()
+
+	# format text
+	text = text.lower()
 	words = text.split()
 
 	for word in words:
 		dictionary[word] = dictionary.get(word, 0) + 1 # increments value by 1
 
-	print dictionary
+	return dictionary
 
 
-def sort_by_frequency(dict):
-	pass
+def sort_by_frequency(dictionary):
+	for key, value in sorted(dictionary.items(), key = lambda x: x[1]):
+		print value, key
+	return "\n"
 
+def sort_by_alphabet(dictionary):
+	for key in sorted(dictionary.keys()):
+		print key, dictionary.get(key, 0)
+	return "\n"
 
 
 # main
 def main():
 	script, filename = argv
 	list_of_text = read_file(filename)
-
+	freq = sort_by_frequency(list_of_text)
+	print freq
+	alphabet = sort_by_alphabet(list_of_text)
+	print alphabet
 
 
 
